@@ -4,7 +4,7 @@ The program that ran the robot in 2018 was made using Labview. I created this pr
 
 ---CONTENT---
 
-OI.java - Create the controllers, buttons, and assign commands to buttons.
+OI.java - Create the controllers.
 
 Robot.java - Runs through the states of the game, executing code throughout.
 
