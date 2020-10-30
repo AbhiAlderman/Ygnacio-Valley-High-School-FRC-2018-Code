@@ -15,6 +15,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import frc.robot.subsystems.DriveTrainSubsystem;
 import frc.robot.subsystems.TriggerValue;
+import frc.robot.subsystems.LiftSubsystem;
 
 
 /**
@@ -28,6 +29,7 @@ public class Robot extends TimedRobot {
   
   public static DriveTrainSubsystem drivesub = new DriveTrainSubsystem();
   public static TriggerValue trigger = new TriggerValue();
+  public static LiftSubsystem liftsub = new LiftSubsystem();
   public static OI m_oi;
 
   Command m_autonomousCommand;
