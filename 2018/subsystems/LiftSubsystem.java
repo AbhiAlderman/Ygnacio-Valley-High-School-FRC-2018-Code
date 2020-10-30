@@ -10,6 +10,7 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
 import frc.robot.commands.LiftCommand;
+import edu.wpi.first.wpilibj.Spark;
 
 /**
  * Add your docs here.
