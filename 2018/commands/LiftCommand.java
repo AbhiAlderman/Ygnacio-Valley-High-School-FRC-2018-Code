@@ -10,9 +10,10 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class DriveTrainCommand extends Command {
-  public DriveTrainCommand() {
-    requires(Robot.drivesub);
+//Command to control Lift with joystick
+public class LiftCommand extends Command {
+  public LiftCommand() {
+    requires(Robot.liftsub);
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }
@@ -26,7 +27,7 @@ public class DriveTrainCommand extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.drivesub.arcadeDrive(-Robot.m_oi.controller.getRawAxis(1), Robot.m_oi.controller.getRawAxis(4));
+    Robot.liftsub.setLift(Robot.m_oi.getRawAxis(3));
   }
 
   // Make this return true when this Command no longer needs to run execute()
