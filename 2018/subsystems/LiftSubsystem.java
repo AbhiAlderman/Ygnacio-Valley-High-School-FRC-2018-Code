@@ -8,28 +8,29 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.RobotMap;
 import frc.robot.commands.LiftCommand;
-
 
 /**
  * Add your docs here.
  */
+public class LiftSubsystem extends Subsystem {
+  //Create liftMotor
+  Spark liftMotor
+    
+  //Assign liftMotor
+  public LiftSubsystem(){
 
-//Subsytem for the arm motor
-public class ArmMotorSubsystem extends Subsystem {
-  //Create the arm motor
-  WPI_TalonSRX armmotor;
-  
-  public ArmMotorSubsystem(){
-    //Assign the arm motor 
-    armmotor = RobotMap.armMotor;
+  liftMotor = RobotMap.lift;
+
+
   }
-  
-  //Method for setting the speed of the arm motor
-  public void armmotorset(double x){
-    armmotor.set(ControlMode.PercentOutput, x);
+
+  //Method to control liftMotor
+  public void setLift(double x){
+
+    liftMotor.set(x)
+      
   }
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
@@ -37,7 +38,7 @@ public class ArmMotorSubsystem extends Subsystem {
   //Set the default command
   @Override
   public void initDefaultCommand() {
-    setDefaultCommand(new ArmMotorCommand());
+    setDefaultCommand(new LiftCommand());
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
   }
